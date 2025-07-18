@@ -1,8 +1,8 @@
-name: CI/CD Serverless Lambda
+name: CI/CD Serverless lambda
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
@@ -35,7 +35,7 @@ jobs:
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
 
-      - name: Zip Lambda
+      - name: Zip lambda
         run: |
           cd lambda
           zip -r ../lambda.zip .
